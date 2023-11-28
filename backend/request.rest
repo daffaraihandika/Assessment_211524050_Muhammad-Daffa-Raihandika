@@ -1,0 +1,111 @@
+//------------------------------------------------------------//
+
+### Create barang
+POST http://localhost:5000/barang
+Content-Type: application/json
+
+{
+    "KodeBarang": "BRG21152405001",
+    "NamaBarang": "Indomie Rasa Muhammad Daffa Raihandika",
+    "Satuan": "Bungkus",
+    "HargaSatuan": 3000,
+    "Stok": 50
+}
+
+### Update Barang
+PATCH http://localhost:5000/kasir/KS21152405001
+Content-Type: application/json
+
+{
+    "Nama": "Ani Muhammad Daffa"
+}
+
+### Get All Barang
+GET  http://localhost:5000/barang
+
+### Get Detail Barang
+GET  http://localhost:5000/barang/BRG21152405002
+
+### Delete Barang
+DELETE  http://localhost:5000/barang/BRG21152405002
+
+
+### Create Kasir
+POST http://localhost:5000/kasir
+Content-Type: application/json
+
+{
+    "KodeKasir": "KS21152405001",
+    "Nama": "Ani Muhammad Daffa Raihandika",
+    "HP": "08211524050375"
+}
+
+### Get Kasir by KodeKasir
+GET http://localhost:5000/kasir
+
+### Get Kasir by KodeKasir
+GET http://localhost:5000/kasir/KS21152405001
+
+### Delete Kasir
+DELETE  http://localhost:5000/kasir/KS21152405001
+
+
+### Create Tenan
+POST http://localhost:5000/tenan
+Content-Type: application/json
+
+{
+    "KodeTenan": "TK21152405001",
+    "NamaTenan": "Daffa Maret",
+    "HP": "08211524050444,"
+}
+
+### Update Tenan
+PATCH http://localhost:5000/tenan/TK21152405001
+Content-Type: application/json
+
+{
+    "NamaTenan": "Daffa Juni"
+}
+
+### Get All Tenan
+GET http://localhost:5000/tenan
+
+### Get Detail Tenan
+GET http://localhost:5000/tenan/TK21152405001
+
+### Delete Tenan
+DELETE  http://localhost:5000/tenan/TK21152405001
+
+//////////////////////// CRUD NOTA ////////////////////////////
+###
+GET http://localhost:5000/nota
+
+###
+GET http://localhost:5000/nota/NO21152404901
+
+###
+POST http://localhost:5000/nota
+Content-Type: application/json
+
+{   
+    "KodeNota": "NO21152405002",
+    "KodeTenan": "TK21152405001",
+    "KodeKasir": "KS21152405001",
+    "TglNota": "2023-11-27T10:23:00Z",
+    "JamNota": "2023-11-27T10:30:18Z",
+    "JumlahBelanja" : 200000,
+    "Diskon": 2,
+    "Total": 98000
+}
+
+
+
+###
+PATCH http://localhost:5000/nota/NO21152405001
+Content-Type: application/json
+
+{   
+    "JamNota": "2023-11-27T10:30:18Z"
+}
+
