@@ -109,3 +109,33 @@ Content-Type: application/json
     "JamNota": "2023-11-27T10:30:18Z"
 }
 
+### Create BarangNota
+POST http://localhost:5000/barangnota
+Content-Type: application/json
+
+{
+    "KodeNota": "NO21152405001",
+    "KodeBarang": "BRG21152405001",
+    "JumlahBarang": 5,
+    "HargaSatuan": 3000,
+    "Jumlah": 15000
+}
+
+### Get All BarangNota
+GET http://localhost:5000/barangnota
+
+### Get BarangNota by KodeNota
+GET http://localhost:5000/barangnota/NO21152405001
+
+### Update BarangNota
+PATCH http://localhost:5000/barangnota/NO21152405001/BRG21152405001
+Content-Type: application/json
+
+{
+    "JumlahBarang": 10,
+    "HargaSatuan": 3500,
+    "Jumlah": 35000
+}
+
+### Delete BarangNota
+DELETE http://localhost:5000/barangnota/NO21152405001/BRG21152405001

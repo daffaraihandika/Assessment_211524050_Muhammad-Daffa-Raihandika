@@ -26,6 +26,7 @@ import DataDiriEdit from "./components/DataDiri/dataDiriEdit";
 import DataDiriDetails from "./components/DataDiri/dataDiriDetails";
 import ConvertToWeb from "./components/CV/personalWeb";
 import NotFound404 from "./components/notFound404";
+import ListBarang from "./components/Barang/listBarang";
 axios.defaults.withCredentials = true;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -35,93 +36,94 @@ const router = createBrowserRouter([
     element: <LandingPage />,
   },
   {
-    path: "/login",
-    element: <Login />,
+    path: "/list-barang",
+    element: <ListBarang />,
   },
-  {
-    path: "/registrasi",
-    element: <Registrasi />,
-  },
-  {
-    path: "/dashboard",
-    element: <Dashboard />,
-  },
-  {
-    path: "/datadiri/create",
-    element: <DataDiriCreate />,
-  },
-  {
-    path: "/datadiri/:id_akun",
-    element: <DataDiriDetails />,
-  },
-  {
-    path: "/datadiri/edit/:id_person",
-    element: <DataDiriEdit />,
-  },
-  {
-    path: "/datadiri",
-    element: <DataDiriList />,
-  },
-  {
-    path: "/pendidikan/create",
-    element: <PendidikanCreate />,
-  },
-  {
-    path: "/pendidikan/:id_person",
-    element: <PendidikanList />,
-  },
-  {
-    path: "/pendidikan/:id_person/edit/:id_pendidikan",
-    element: <PendidikanEdit />,
-  },
-  {
-    path: "/portofolio/create",
-    element: <PortofolioCreate />,
-  },
-  {
-    path: "/portofolio/:id_person",
-    element: <PortofolioList />,
-  },
-  {
-    path: "/portofolio/:id_person/:id_portofolio",
-    element: <PortofolioDetail />,
-  },
-  {
-    path: "/portofolio/:id_person/edit/:id_portofolio",
-    element: <PortofolioEdit />,
-  },
-  {
-    path: "/organisasi/create",
-    element: <OrganisasiCreate />,
-  },
-  {
-    path: "/organisasi/:id_person",
-    element: <OrganisasiList />,
-  },
-  {
-    path: "/organisasi/:id_person/edit/:id_organisasi",
-    element: <OrganisasiEdit />,
-  },
-  {
-    path: "/skill/create",
-    element: <SkillCreate />,
-  },
-  {
-    path: "/skill/:id_person",
-    element: <SkillList />,
-  },
-  {
-    path: "/skill/:id_person/edit/:id_skill",
-    element: <SkillEdit />,
-  },
-  {
-    path: "/:username",
-    element: <ConvertToWeb />,
-  },
-  {
-    path: "/notfound404",
-    element: <NotFound404 />,
-  },
+
+  // {
+  //   path: "/registrasi",
+  //   element: <Registrasi />,
+  // },
+  // {
+  //   path: "/dashboard",
+  //   element: <Dashboard />,
+  // },
+  // {
+  //   path: "/datadiri/create",
+  //   element: <DataDiriCreate />,
+  // },
+  // {
+  //   path: "/datadiri/:id_akun",
+  //   element: <DataDiriDetails />,
+  // },
+  // {
+  //   path: "/datadiri/edit/:id_person",
+  //   element: <DataDiriEdit />,
+  // },
+  // {
+  //   path: "/datadiri",
+  //   element: <DataDiriList />,
+  // },
+  // {
+  //   path: "/pendidikan/create",
+  //   element: <PendidikanCreate />,
+  // },
+  // {
+  //   path: "/pendidikan/:id_person",
+  //   element: <PendidikanList />,
+  // },
+  // {
+  //   path: "/pendidikan/:id_person/edit/:id_pendidikan",
+  //   element: <PendidikanEdit />,
+  // },
+  // {
+  //   path: "/portofolio/create",
+  //   element: <PortofolioCreate />,
+  // },
+  // {
+  //   path: "/portofolio/:id_person",
+  //   element: <PortofolioList />,
+  // },
+  // {
+  //   path: "/portofolio/:id_person/:id_portofolio",
+  //   element: <PortofolioDetail />,
+  // },
+  // {
+  //   path: "/portofolio/:id_person/edit/:id_portofolio",
+  //   element: <PortofolioEdit />,
+  // },
+  // {
+  //   path: "/organisasi/create",
+  //   element: <OrganisasiCreate />,
+  // },
+  // {
+  //   path: "/organisasi/:id_person",
+  //   element: <OrganisasiList />,
+  // },
+  // {
+  //   path: "/organisasi/:id_person/edit/:id_organisasi",
+  //   element: <OrganisasiEdit />,
+  // },
+  // {
+  //   path: "/skill/create",
+  //   element: <SkillCreate />,
+  // },
+  // {
+  //   path: "/skill/:id_person",
+  //   element: <SkillList />,
+  // },
+  // {
+  //   path: "/skill/:id_person/edit/:id_skill",
+  //   element: <SkillEdit />,
+  // },
+  // {
+  //   path: "/:username",
+  //   element: <ConvertToWeb />,
+  // },
+  // {
+  //   path: "/notfound404",
+  //   element: <NotFound404 />,
+  // },
 ]);
 root.render(
   <React.StrictMode>

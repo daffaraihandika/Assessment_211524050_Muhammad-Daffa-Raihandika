@@ -11,6 +11,13 @@ import {
     updateNota,
     deleteNota,
   } from "../controllers/notaController.js";
+  import {
+    createBarangNota,
+    getAllBarangNota,
+    getBarangNotaByKodeNota,
+    updateBarangNota,
+    deleteBarangNota,
+  } from '../controllers/barangNotaController.js';
   
 
 const router = express.Router();
@@ -46,6 +53,14 @@ router.get("/nota", getAllNota);
 router.get("/nota/:KodeNota", getNota);
 router.patch("/nota/:KodeNota", updateNota);
 router.delete("/nota/:KodeNota", deleteNota);
+
+
+// BarangNota
+router.post('/barangnota', createBarangNota);
+router.get('/barangnota', getAllBarangNota);
+router.get('/barangnota/:KodeNota', getBarangNotaByKodeNota);
+router.patch('/barangnota/:KodeNota/:KodeBarang', updateBarangNota);
+router.delete('/barangnota/:KodeNota/:KodeBarang', deleteBarangNota);
 
 
 export default router;
