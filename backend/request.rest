@@ -5,19 +5,19 @@ POST http://localhost:5000/barang
 Content-Type: application/json
 
 {
-    "KodeBarang": "BRG21152405001",
-    "NamaBarang": "Indomie Rasa Muhammad Daffa Raihandika",
+    "KodeBarang": "BRG21152405002",
+    "NamaBarang": "Signature Muhammad Daffa Raihandika",
     "Satuan": "Bungkus",
     "HargaSatuan": 3000,
     "Stok": 50
 }
 
 ### Update Barang
-PATCH http://localhost:5000/kasir/KS21152405001
+PATCH http://localhost:5000/barang/BRG21152405002
 Content-Type: application/json
 
 {
-    "Nama": "Ani Muhammad Daffa"
+    "NamaBarang": "Susu Ultra Muhammad Daffa Raihandika"
 }
 
 ### Get All Barang
@@ -35,8 +35,8 @@ POST http://localhost:5000/kasir
 Content-Type: application/json
 
 {
-    "KodeKasir": "KS21152405001",
-    "Nama": "Ani Muhammad Daffa Raihandika",
+    "KodeKasir": "KS21152405002",
+    "Nama": "Budi Muhammad Daffa Raihandika",
     "HP": "08211524050375"
 }
 
@@ -55,8 +55,8 @@ POST http://localhost:5000/tenan
 Content-Type: application/json
 
 {
-    "KodeTenan": "TK21152405001",
-    "NamaTenan": "Daffa Maret",
+    "KodeTenan": "TK21152405002",
+    "NamaTenan": "Daffa April",
     "HP": "08211524050444,"
 }
 
@@ -89,7 +89,7 @@ POST http://localhost:5000/nota
 Content-Type: application/json
 
 {   
-    "KodeNota": "NO21152405002",
+    "KodeNota": "NO21152405101",
     "KodeTenan": "TK21152405001",
     "KodeKasir": "KS21152405001",
     "TglNota": "2023-11-27T10:23:00Z",
